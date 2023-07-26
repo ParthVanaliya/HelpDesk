@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Employees</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
+		<link rel="stylesheet" href="Emp.css">
+		
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<div id="google_translate_element">
+		<div class="heading">
+		<header>
+        <h1 class="Employees" style="color: black; text-transform: uppercase; letter-spacing: 3px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Employees</h1>
+        <form class="sbar">
+		<input type="search" placeholder="Search" class="search" id="search" autocomplete="off">
+		<button type="submit" class="Go"><i class="fa-solid fa-magnifying-glass"></i></button>
+		
+        </form>
+		</header>
+		<nav>
+            <button type="button" onclick="window.history.back()" class="Back"><i class="fa-solid fa-arrow-left"style="margin-right: 9px;"></i>Back</button>
+            <a href="hpDemo.html" class="Home" style="text-decoration: none;">  <i class="fa-solid fa-house-chimney" style="margin-right: 7px;"></i> Home</a>
+		</nav>
+		</div>
+		<!-- wavy background -->
+		<div class='box'>
+        <div class='wave -one'></div>
+        <div class='wave -two'></div>
+        <div class='wave -three'></div>
+		</div>
+		
+		<!-- cards -->
+		<div class="container">
+		<div class="card" style="width: 18rem;">
+        <img src="images/e7.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+		<h5 class="card-title">Brent Smith</h5>
+		<h6 class="card-des">CEO</h6>
+		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		<a href="location.html" class="btn btn-primary">View Location</a>
+        </div>
+		</div>
+		<!-- card -->
+		<div class="card" style="width: 18rem;">
+        <img src="images/e3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+		<h5 class="card-title">Elizabeth Banks</h5>
+		<h6 class="card-des">Sub-Divisional Magistrate</h6>
+		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		<a href="location.html" class="btn btn-primary">View Location</a>
+        </div>
+		</div>
+		<!-- card -->
+		<div class="card" style="width: 18rem;">
+        <img src="images/e4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+		<h5 class="card-title">Sylvia Rose</h5>
+		<h6 class="card-des">Deputy Commissioner</h6>
+		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		<a href="location.html" class="btn btn-primary">View Location</a>
+        </div>
+		</div>
+		<!-- card -->
+		<div class="card" style="width: 18rem;">
+        <img src="images/e5.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+		<h5 class="card-title">Corey Hall</h5>
+		<h6 class="card-des">District Collector</h6>
+		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		<a href="location.html" class="btn btn-primary">View Location</a>
+        </div>
+		</div>
+		<!-- card -->
+		<div class="card" style="width: 18rem;">
+        <img src="images/e4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+		<h5 class="card-title">Ronnie Wade</h5>
+		<h6 class="card-des">District Magistrate</h6>
+		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		<a href="location.html" class="btn btn-primary">View Location</a>
+        </div>
+		</div>
+		
+		<div class="card" style="width: 18rem;">
+        <img src="images/e8.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+		<h5 class="card-title">John Sanchez</h5>
+		<h6 class="card-des">Additional Deputy Commissioner</h6>
+		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		<a href="location.html" class="btn btn-primary">View Location</a>
+        </div>
+		</div>
+		
+		<div class="card" style="width: 18rem;">
+        <img src="images/e9.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+		<h5 class="card-title">Zachary Gibson</h5>
+		<h6 class="card-des">Sub-Divisional Officer</h6>
+		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		<a href="location.html" class="btn btn-primary">View Location</a>
+        </div>
+		</div>
+		
+		<div class="card" style="width: 18rem;">
+        <img src="images/e1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+		<h5 class="card-title">David Taylor</h5>
+		<h6 class="card-des">Tehsildar/Naib Tehsildar</h6>
+		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		<a href="location.html" class="btn btn-primary">View Location</a>
+        </div>
+		</div> 
+		</div>   
+		</div>
+
+		<!-- Search Button JavaScript -->
+		<script>
+		const searchInput = document.querySelector("#search");
+		const employeeCards = document.querySelectorAll(".card");
+		
+		searchInput.addEventListener("input", function() {
+		const searchTerm = searchInput.value.toLowerCase();
+		employeeCards.forEach(function(employeeCard) {
+		const employeeName = employeeCard.querySelector(".card-title").textContent.toLowerCase();
+		const employeeTitle = employeeCard.querySelector(".card-des").textContent.toLowerCase();
+		if (employeeName.includes(searchTerm) || employeeTitle.includes(searchTerm)) {
+		// employeeCard.style.display = "block";
+		employeeCard.style.margin = "15px 20px";
+		
+		} else {
+		employeeCard.style.display = "none";
+		}
+		});
+		});
+		
+		
+		// const submitButton = document.querySelector("button[type='submit']");
+		// submitButton.addEventListener("click", function() {
+		// const searchTerm = searchInput.value.toLowerCase();
+		// deptCards.forEach(function(deptCard) {
+		//     const deptName = deptCard.querySelector(".dept-name").textContent.toLowerCase();
+        
+		//     if (deptName.includes(searchTerm)) {
+		//     deptCard.style.display = "block";
+		//     } else {
+		//     deptCard.style.display = "none";
+		//     }
+		// });
+		// });
+		</script>
+		
+		<!-- Language Translate -->
+		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		<script type="text/javascript">
+		// const queryString = window.location.search;
+		// const urlParams = new URLSearchParams(queryString);
+		// const product = urlParams.get('dept');
+		
+		// if(product == 'emp'){
+		// var value = "/en/hi";
+		// }else{
+		// var value = "/en/";
+		// }
+		
+		var value = localStorage.getItem('lang'); //Retrieving Value Of Language from Local Storage
+
+		function googleTranslateElementInit() {
+        
+			setCookie('googtrans', 1);
+		
+			new google.translate.TranslateElement({ pageLanguage: 'ES', layout: google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay: false }, 'google_translate_element');
+		}
+		
+		function setCookie(key, expiry) {
+		// value="/en/hi";
+			var expires = new Date();
+			expires.setTime(expires.getTime() + (expiry * 24 * 60 * 60 * 1000));
+			document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+		}
+		
+		</script>
+		
+	</body>
+</html>
+				

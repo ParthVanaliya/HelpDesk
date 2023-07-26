@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recieve</title>
+    <link rel="stylesheet" href="Recieve.css" type="text/css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
+</head>
+<body>
+    <div class="heading">
+        <!-- <header>
+            <h1 class="Forms" style="color: black; text-transform: uppercase; letter-spacing: 3px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-align: center;">Forms</h1>
+        </header>
+         -->
+        <nav>
+            <button type="button" onclick="window.location.href = 'Form.html';" class="Back"><i class="fa-solid fa-arrow-left"style="margin-right: 9px;"></i>Back</button>
+            <a href="hpDemo.html" class="Home" style="text-decoration: none;">  <i class="fa-solid fa-house-chimney" style="margin-right: 7px;"></i> Home</a>
+      
+        </nav>
+    </div>
+    <div class="background">
+        <div class="container">
+          <div class="screen">
+            <div class="screen-header">
+              <div class="screen-header-left">
+                <div class="screen-header-button close"></div>
+                <div class="screen-header-button maximize"></div>
+                <div class="screen-header-button minimize"></div>
+              </div>
+              <div class="screen-header-right">
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+              </div>
+            </div>
+            <div class="screen-body">
+              <div class="screen-body-item left">
+                <div class="app-title">
+                  <span>RECIEVE</span>
+                  <span>FORM</span>
+                </div>
+              </div>
+              <div class="screen-body-item">
+                <div class="app-form">
+                  <form action="#" id="Recieve_Form">
+                  <div class="app-form-group">
+                    <input type="text" autocomplete="off" class="app-form-control" placeholder="NAME" value="" id="Name">
+                  </div>
+                  <div class="app-form-group">
+                    <input type="text" autocomplete="off" class="app-form-control" placeholder="EMAIL" id="Email" required>
+                  </div>
+               
+                  <!-- <div class="app-form-group">
+                    <input class="app-form-control" placeholder="CONTACT NO">
+                  </div>
+                  <div class="app-form-group message">
+                    <input class="app-form-control" placeholder="MESSAGE">
+                  </div> -->
+                  <div class="app-form-group buttons">
+                    <button class="app-form-button cancel" onclick="document.getElementById('Recieve_Form').reset();">CANCEL</button>
+                    <button class="app-form-button recieve" onclick="mail(); validateEmail(); return false;">RECIEVE</button>
+                  </div>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<!-- Sending E-mail with JavaScript -->
+    
+    <script>
+      
+      
+      function mail(){
+
+        let uemail = document.getElementById("Email").value;
+        let uname = document.getElementById("Name").value;
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const Form = urlParams.get('Form_No');
+
+        if(Form == '00'){
+          var fileName = "2018081061.pdf";
+          var filePath = "https://cdn.s3waas.gov.in/s3ccb0989662211f61edae2e26d58ea92f/uploads/2018/08/2018081061.pdf";
+          var formName = "Caste Certificate";
+        }else if(Form == '01'){
+          var fileName = "2018093085.pdf";
+          var filePath = "https://cdn.s3waas.gov.in/s3e2a2dcc36a08a345332c751b2f2e476c/uploads/2018/09/2018093085.pdf";
+        }else if(Form == '02'){
+          var fileName = "2018093017.pdf";
+          var filePath = "https://cdn.s3waas.gov.in/s3e2a2dcc36a08a345332c751b2f2e476c/uploads/2018/09/2018093017.pdf";
+        }else if(Form == '03'){
+          var fileName = "2018093099.pdf";
+          var filePath = "https://cdn.s3waas.gov.in/s3e2a2dcc36a08a345332c751b2f2e476c/uploads/2018/09/2018093099.pdf";
+        }else if(Form == '04'){
+          var fileName = "2018093078.pdf";
+          var filePath = "https://cdn.s3waas.gov.in/s3e2a2dcc36a08a345332c751b2f2e476c/uploads/2018/09/2018093078.pdf";
+        }else if(Form == '05'){
+          var fileName = "2018093039.pdf";
+          var filePath = "https://cdn.s3waas.gov.in/s3e2a2dcc36a08a345332c751b2f2e476c/uploads/2018/09/2018093039.pdf";
+        }
+ 
+        Email.send({
+                SecureToken : "dc97ec58-08fa-48d6-b345-721791c277c7",
+                Host : "smtp.elasticemail.com",
+                Username : "vanaliyaparth007@gmail.com",
+                Password : "A88424E8F9D90FC2BA4465DB8602A5AC0514",
+                // Password : "7D09814C2662FE73DD97E0B1FD35559EA168",
+                // To : document.getElementById("Email").value,
+                // To : "parthvanaliya28@gmail.com",
+                To : uemail,
+                From : "vanaliyaparth007@gmail.com",
+                Subject : "Form",
+                Body : "Hello..!  "+uname+"<br/>  This is your Form of "+formName , 
+                // Body : "Hello..! This is your Form  --> " , 
+                Attachments : [
+                    {
+                      // name : "2018093085.pdf",
+                      // path : "https://cdn.s3waas.gov.in/s3e2a2dcc36a08a345332c751b2f2e476c/uploads/2018/09/2018093085.pdf"
+                      name : fileName,
+                      path : filePath,
+                    }]
+                }).then(
+              message => alert(message)
+            );
+            }
+    </script>
+
+<!-- E-mail Validation -->
+
+        <script>
+          function validateEmail() {
+            var email = document.getElementById("Email").value;
+            var regex = /^[a-zA-Z0-9._%+-]+@gmail.com$/;
+          
+            if (regex.test(email)) {
+              // alert("Valid Gmail address");
+            } else {
+              alert("Invalid Gmail address");
+            }
+          }
+          </script>
+</body>
+</html>

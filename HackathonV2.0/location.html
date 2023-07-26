@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Location</title>
+		<link rel="stylesheet" href="Location.css" type="text/css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
+		
+	</head>
+	<body>
+		<div id="google_translate_element">
+		<!--header-->
+		<div class="heading">
+			<header>
+				<h1 class="Location" style="color: black; text-transform: uppercase; letter-spacing: 3px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-align: center;">Location</h1>
+			</header>
+			
+			<nav>
+				<button type="button" onclick="window.history.back()" class="Back"><i class="fa-solid fa-arrow-left"style="margin-right: 9px;"></i>Back</button>
+				<a href="hpDemo.html" class="Home" style="text-decoration: none;">  <i class="fa-solid fa-house-chimney" style="margin-right: 7px;"></i> Home</a>
+			</nav>
+		</div>
+		
+		<div class="location">
+			<div class="audio">
+				<audio controls autoplay>
+					<source src="Location Sound.mp3" type="audio/mpeg">
+				</audio>
+			</div>
+			
+			<div class="loc">
+				<div class="image">
+					<img style="width:100%" name="img_wing" src="images/floor.jpg">
+				</div>
+				
+				<div class="image">
+					<img style="width:100%" name="img_floor" src="images/m3.jpg">
+				</div>
+				
+				<div class="image">
+				<img style="width:100%" name="img_room" src="images/m4.jpg">
+				</div>
+				</div>
+				</div>
+				
+				<div class="desc">
+				
+				
+				<h1>DESCRIPTION</h1>
+				<p>Go straight to the left wing building and take the first left. You will see the elevators on your right, take it to the 2nd floor and turn left. Follow the corridor until you reach room number 34 on your right.
+				</p>
+				</div>
+				</div>
+				
+				<!-- Language Translate -->
+				<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+				<script type="text/javascript">
+						// const queryString = window.location.search;
+						// const urlParams = new URLSearchParams(queryString);
+						// const product = urlParams.get('emp');
+						
+						// if(product == 'loc'){
+						// var value = "/en/hi";
+						// }else{
+						// var value = "/en/";
+						// }
+						
+						var value = localStorage.getItem('lang'); //Retrieving Value Of Language from Local Storage
+
+						function googleTranslateElementInit() {
+							setCookie('googtrans', 1);
+							new google.translate.TranslateElement({ pageLanguage: 'ES', layout: google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay: false }, 'google_translate_element');
+						}
+
+						function setCookie(key, expiry) {
+						// value="/en/hi";
+							var expires = new Date();
+							expires.setTime(expires.getTime() + (expiry * 24 * 60 * 60 * 1000));
+							document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+						}
+				</script>
+		
+	</body>
+</html>			

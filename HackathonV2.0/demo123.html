@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="radio"]:checked + button {
+  background-color: red;
+}
+
+input[type="radio"] + button {
+  background-color: green;
+}
+
+    </style>
+</head>
+<body>
+    <input type="radio" name="color" id="green">
+<button for="green">Green</button>
+
+<input type="radio" name="color" id="red">
+<button for="red">Red</button>
+
+
+<script>
+    const cn = document.getElementById(green);
+    cn.addEventListener("checked", function() {
+           cn.style.color ="red";
+    });
+</script>
+    
+</body>
+</html>

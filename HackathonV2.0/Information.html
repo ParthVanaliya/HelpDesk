@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <link rel="stylesheet" href="Information.css" type="text/css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
+    <style>
+          .table thead{
+            display: none;
+        }
+        .table, .table tbody, .table tr, .table td{
+            display: block;
+            width: 100%;
+        }
+        .table tr{
+            margin-bottom: 15px;
+        }
+        .table tbody tr td{
+            text-align: left;
+            padding-left: 50%;
+            position: relative;
+        }
+        .table td::before{
+            content: attr(data-label);
+            position: absolute;
+            left: 0;
+            width: 50%;
+            padding-left: 15px;
+            font-weight: 700;
+            font-size: 14px;
+            text-align: left;
+            /* color: #ff1046; */
+        }
+        .table th{
+            align-items: center;
+        }
+        .table td{
+            font-size: 20px;
+        }
+        .Title{
+            background-color: #ee2828 !important;
+        }
+        li{
+            list-style-type: square;
+            line-height: 21px;
+        }
+        .Contact{
+            line-height: 21px;
+        }
+        .table tr {
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="google_translate_element">
+            <div class="heading">
+                <header>
+                    <h1 class="Forms" style="color: black;  text-transform: uppercase; letter-spacing: 3px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-align: center;">Information</h1>
+                </header>
+                
+                <nav>
+                    <button type="button" onclick="window.location.href = 'Form.html';" class="Back"><i class="fa-solid fa-arrow-left"style="margin-right: 9px;"></i>Back</button>
+                    <a href="hpDemo.html" class="Home" style="text-decoration: none;">  <i class="fa-solid fa-house-chimney" style="margin-right: 7px;"></i> Home</a>
+                </nav>
+            </div>
+            
+            <div class="table_container">
+                
+                
+                <table class="table">
+                    
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Profile Picture</th>
+                            <th>Name</th>
+                            <th>Designation</th>
+                            <th>Documents Required</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table_title">
+                        <tr class="raw" id="info_1">
+                            <td data-label="Title" class="Title" >Caste Certificate</td>
+                            <td data-label="Profile Picture" class="profilePicture"><img src="images/profile_picture.jpg" alt="Profile Picture"></td>
+                            <td data-label="Officer Name" class="Name">Smt. Stuti Charan- IAS</td>
+                            <td data-label="Officer's Designation" class="Designation">Collector and District Magistrate</td>
+                            <td data-label="Location" class="Loc">Room No 9 , First Floor , Jilla Seva Sadan Chhotaudepur</td>
+                            <td data-label="Documents Required" class="Doc">
+                                <li>Parents'/ Parents' Siblings(Preferably Male) Caste Certificate</li>
+                                <li>Photo ID</li>
+                                <li>Copy of State School Leaving Certificate (SSLC)</li>
+                                <li>One Photo</li>
+                                <li>Photo Copy of the Ration Card</li>
+                                <li>Affidavit on Stamp Paper of Rs 10</li>
+                            </td>
+                            <td data-label="Contact Details" class="Contact"> Phone :- +91 9876543210 <br> Email :- officer@mail.com</td>
+                            <td data-label="Recieve"><a href="Recieve.html?Form_No=00" class="btn">Recieve Form</a></td>
+                        </tr>
+                        <tr class="raw"id="info_2">
+                            <td data-label="Title" class="Title" >RTI - Prescribed format for first appeal</td>
+                            <td data-label="Profile Picture" class="profilePicture"><img src="images/profile_picture.jpg" alt="Profile Picture"></td>
+                            <td data-label="Officer Name" class="Name">Smt. Stuti Charan- IAS</td>
+                            <td data-label="Officer's Designation" class="Designation">Collector and District Magistrate</td>
+                            <td data-label="Location" class="Loc">Room No 9 , First Floor , Jilla Seva Sadan Chhotaudepur</td>
+                            <td data-label="Documents Required" class="Doc">
+                                <li>Parents'/ Parents' Siblings(Preferably Male) Caste Certificate</li>
+                                <li>Photo ID</li>
+                                <li>Copy of State School Leaving Certificate (SSLC)</li>
+                                <li>One Photo</li>
+                                <li>Photo Copy of the Ration Card</li>
+                                <li>Affidavit on Stamp Paper of Rs 10</li>
+                            </td>
+                            <td data-label="Contact Details" class="Contact"> Phone :- +91 9876543210 <br> Email :- officer@mail.com</td>
+                            <td data-label="Recieve"><a href="Recieve.html?Form_No=01" class="btn">Recieve Form</a></td>
+                        <tr class="raw" id="info_3">
+                            <td data-label="Title" class="Title" >RTI- Prescribed format for getting information</td>
+                            <td data-label="Profile Picture" class="profilePicture"><img src="images/profile_picture.jpg" alt="Profile Picture"></td>
+                            <td data-label="Officer Name" class="Name">Smt. Stuti Charan- IAS</td>
+                            <td data-label="Officer's Designation" class="Designation">Collector and District Magistrate</td>
+                            <td data-label="Location" class="Loc">Room No 9 , First Floor , Jilla Seva Sadan Chhotaudepur</td>
+                            <td data-label="Documents Required" class="Doc">
+                                <li>Parents'/ Parents' Siblings(Preferably Male) Caste Certificate</li>
+                                <li>Photo ID</li>
+                                <li>Copy of State School Leaving Certificate (SSLC)</li>
+                                <li>One Photo</li>
+                                <li>Photo Copy of the Ration Card</li>
+                                <li>Affidavit on Stamp Paper of Rs 10</li>
+                            </td>
+                            <td data-label="Contact Details" class="Contact"> Phone :- +91 9876543210 <br> Email :- officer@mail.com</td>
+                            <td data-label="Recieve"><a href="Recieve.html?Form_No=02" class="btn">Recieve Form</a></td>
+                        </tr>
+                        <tr class="raw" id="info_4">
+                            <td data-label="Title" class="Title" >Arms-licence Form</td>
+                            <td data-label="Profile Picture" class="profilePicture"><img src="images/profile_picture.jpg" alt="Profile Picture"></td>
+                            <td data-label="Officer Name" class="Name">Smt. Stuti Charan- IAS</td>
+                            <td data-label="Officer's Designation" class="Designation">Collector and District Magistrate</td>
+                            <td data-label="Location" class="Loc">Room No 9 , First Floor , Jilla Seva Sadan Chhotaudepur</td>
+                            <td data-label="Documents Required" class="Doc">
+                                <li>Parents'/ Parents' Siblings(Preferably Male) Caste Certificate</li>
+                                <li>Photo ID</li>
+                                <li>Copy of State School Leaving Certificate (SSLC)</li>
+                                <li>One Photo</li>
+                                <li>Photo Copy of the Ration Card</li>
+                                <li>Affidavit on Stamp Paper of Rs 10</li>
+                            </td>
+                            <td data-label="Contact Details" class="Contact"> Phone :- +91 9876543210 <br> Email :- officer@mail.com</td>
+                            <td data-label="Recieve"><a href="Recieve.html?Form_No=04" class="btn">Recieve Form</a></td>
+                        </tr>
+                        <tr class="raw" id="info_5">
+                            <td data-label="Title" class="Title" >Apostille - Document Verification ( Birth, Death, Marriage,affidevit)</td>
+                            <td data-label="Profile Picture" class="profilePicture"><img src="images/profile_picture.jpg" alt="Profile Picture"></td>
+                            <td data-label="Officer Name" class="Name">Smt. Stuti Charan- IAS</td>
+                            <td data-label="Officer's Designation" class="Designation">Collector and District Magistrate</td>
+                            <td data-label="Location" class="Loc">Room No 9 , First Floor , Jilla Seva Sadan Chhotaudepur</td>
+                            <td data-label="Documents Required" class="Doc">
+                                <li>Parents'/ Parents' Siblings(Preferably Male) Caste Certificate</li>
+                                <li>Photo ID</li>
+                                <li>Copy of State School Leaving Certificate (SSLC)</li>
+                                <li>One Photo</li>
+                                <li>Photo Copy of the Ration Card</li>
+                                <li>Affidavit on Stamp Paper of Rs 10</li>
+                            </td>
+                            <td data-label="Contact Details" class="Contact"> Phone :- +91 9876543210 <br> Email :- officer@mail.com</td>
+                            <td data-label="Recieve"><a href="Recieve.html?Form_No=05" class="btn">Recieve Form</a></td>
+                        </tr>
+                        <tr class="raw" id="info_6">
+                            <td data-label="Title" class="Title" >Application for Certified Copy</td>
+                            <td data-label="Profile Picture" class="profilePicture"><img src="images/profile_picture.jpg" alt="Profile Picture"></td>
+                            <td data-label="Officer Name" class="Name">Smt. Stuti Charan- IAS</td>
+                            <td data-label="Officer's Designation" class="Designation">Collector and District Magistrate</td>
+                            <td data-label="Location" class="Loc">Room No 9 , First Floor , Jilla Seva Sadan Chhotaudepur</td>
+                            <td data-label="Documents Required" class="Doc">
+                                <li>Parents'/ Parents' Siblings(Preferably Male) Caste Certificate</li>
+                                <li>Photo ID</li>
+                                <li>Copy of State School Leaving Certificate (SSLC)</li>
+                                <li>One Photo</li>
+                                <li>Photo Copy of the Ration Card</li>
+                                <li>Affidavit on Stamp Paper of Rs 10</li>
+                            </td>
+                            <td data-label="Contact Details" class="Contact"> Phone :- +91 9876543210 <br> Email :- officer@mail.com</td>
+                            <td data-label="Recieve"><a href="Recieve.html?Form_No=06" class="btn">Recieve Form</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+</body>
+</html>
